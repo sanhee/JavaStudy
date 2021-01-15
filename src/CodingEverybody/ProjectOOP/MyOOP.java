@@ -2,16 +2,24 @@ package CodingEverybody.ProjectOOP;
 
 public class MyOOP {
     public static void main(String[] args) {
-        Print.delimiter = "----";
-        Print.A();
-        Print.A();
-        Print.B();
-        Print.B();
+        Print p1 = new Print(); // Print 라는 클래스를 복제함
+        p1.delimiter = "----";
+        p1.A();
+        p1.A();
+        p1.B();
+        p1.B();
 
-        Print.delimiter = "****";
-        Print.A();
-        Print.A();
-        Print.B();
-        Print.B();
+        Print p2 = new Print(); // Print 라는 클래스를 복제함
+        p2.delimiter = "****";
+        p2.A();
+        p2.A();
+        p2.B();
+        p2.B();
+
+        p1.A();
+        p2.A();
+        p1.A();
+        p2.A();
+
     }
 }

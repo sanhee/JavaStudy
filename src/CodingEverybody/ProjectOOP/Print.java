@@ -6,12 +6,12 @@ class Print{
     //m 클래스 안 변수와 메소드를 멤버라고 한다.
 
     public static String delimiter = "";
-    public static void A() {
+    public void A() {
         System.out.println(delimiter);
         System.out.println("A");
         System.out.println("A");
     }
-    public static void B() {
+    public void B() {
         System.out.println(delimiter);
         System.out.println("B");
         System.out.println("B");
