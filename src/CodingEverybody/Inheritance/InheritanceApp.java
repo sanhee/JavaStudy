@@ -10,6 +10,13 @@ class Cal3 extends Cal{
     public int minus(int v1, int v2){
         return v1-v2;
     }
+
+    //m 부모 클래스의 기능을 재정의
+    @Override
+    public int sum(int v1, int v2) {
+        System.out.println("Cal3");
+        return v1+v2;
+    }
 }
 
 public class InheritanceApp {
