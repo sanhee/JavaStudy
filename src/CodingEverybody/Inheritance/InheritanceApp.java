@@ -7,11 +7,15 @@ class Cal{
 }
 
 class Cal3 extends Cal{
+    public int minus(int v1, int v2){
+        return v1-v2;
+    }
 }
 
 public class InheritanceApp {
     public static void main(String[] args) {
         Cal3 c = new Cal3();
         System.out.println(c.sum(2,1));
+        System.out.println(c.minus(2,1));
     }
 }
