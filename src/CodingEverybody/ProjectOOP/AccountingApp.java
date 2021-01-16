@@ -1,28 +1,33 @@
 package CodingEverybody.ProjectOOP;
 
 class Accounting{
-    // 공급가액
-    public static double valueOfSupply;
-    // 부가가치세율
-    public static double vatRate = 0.1;
-
-    public static double getVAT() {
+    public double valueOfSupply;
+    public static double vatRate = 0.1; //m 현재 모든 인스턴스가 사용 및 공유하는 변수로 클래스 변수, static 변수로 사용하는 것이 메모리쪽에서도 절약이되며, 유지보수 측면에서도 좋음
+    public Accounting(double valueOfSupply) {
+        this.valueOfSupply = valueOfSupply;
+    }
+    public double getVAT() {
         return valueOfSupply * vatRate;
     }
-    public static double getTotal() {
+    public double getTotal() {
         return valueOfSupply + getVAT();
     }
 }
-
 public class AccountingApp {
-
-    //m 연관된 메소드끼리 그룹화
-
     public static void main(String[] args) {
-        Accounting.valueOfSupply = 10000.0;
+        Accounting a1 = new Accounting(10000.0);
 
-        System.out.println("Value of supply : " + Accounting.valueOfSupply);
-        System.out.println("VAT : " + Accounting.getVAT());
-        System.out.println("Total : " + Accounting.getTotal());
+        Accounting a2 = new Accounting(20000.0);
+
+        System.out.println("Value of supply : " + a1.valueOfSupply);
+        System.out.println("Value of supply : " + a2.valueOfSupply);
+
+        System.out.println("VAT : " + a1.getVAT());
+        System.out.println("VAT : " + a2.getVAT());
+
+        System.out.println("Total : " + a1.getTotal());
+        System.out.println("Total : " + a2.getTotal());
+
+
     }
 }
