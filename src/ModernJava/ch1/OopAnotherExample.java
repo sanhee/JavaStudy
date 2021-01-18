@@ -12,6 +12,9 @@ class CalculatorService {
         else if(cal == '*'){
             return num1 * num2;
         }
+        else if(cal == '/'){
+            return num1 / num2;
+        }
         else
             throw new IllegalArgumentException("Unknown calculation: "+cal);
     }
@@ -33,6 +36,10 @@ public class OopAnotherExample{
         //m 요구사항이 자꾸 늘어나면 코드가 점점 길어짐
         final int multiplicationResult = calculatorService.calculate('*',1, 1);
         System.out.println(multiplicationResult);
+
+        //m ...
+        final int divisionResult = calculatorService.calculate('/',8, 4);
+        System.out.println(divisionResult);
 
     }
 }
