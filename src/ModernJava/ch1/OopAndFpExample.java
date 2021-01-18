@@ -36,11 +36,14 @@ public class OopAndFpExample{
 
         FpCalculatorService fpCalculatorService =new FpCalculatorService();
 
-        //m DI: Dependency Injection, It is Strategy Pattern of Design Pattern
-        System.out.println(" addition: "+fpCalculatorService.calculate((num1,num2)->{return num1+num2;},11,4));
+        final Calculation addition = (num1,num2)->{return num1+num2;};
+
+        System.out.println(" addition: "+fpCalculatorService.calculate(addition,11,4));
         System.out.println(" subtraction: "+fpCalculatorService.calculate((num1,num2)->num1-num2,11,1));
         System.out.println(" Multiplication: "+fpCalculatorService.calculate((n1,n2)->n1*n2,11,2));
         System.out.println(" Division: "+fpCalculatorService.calculate((int n1,int n2)->n1/n2,20,4));
+
+        System.out.println(" custom calc: "+fpCalculatorService.calculate((n1,n2)->((n1+n2)*2),20,4));
 
     }
 }
