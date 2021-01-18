@@ -88,6 +88,8 @@ public class OopAndFpExample{
          */
 
         FpCalculatorService fpCalculatorService =new FpCalculatorService();
+
+        //m DI: Dependency Injection, It is Strategy Pattern of Design Pattern
         System.out.println(" addition: "+fpCalculatorService.calculate(new Addition(),11,4));
         System.out.println(" subtraction: "+fpCalculatorService.calculate(new Subtraction(),11,1));
         System.out.println(" Multiplication: "+fpCalculatorService.calculate(new Multiplication(),11,2));
