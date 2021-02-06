@@ -36,7 +36,7 @@ class Computer extends Product {
         return "Computer";
     }
 }
-class Book extends Product{
+class Book extends Product {
     Book(){
         super(200);
     }
