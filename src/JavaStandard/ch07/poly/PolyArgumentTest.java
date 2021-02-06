@@ -1,5 +1,7 @@
 package JavaStandard.ch07.poly;
 
+import java.util.Vector;
+
 class Product{
     int price;
     int bonusPoint;
@@ -32,23 +34,24 @@ class SmartPhone extends Product{
 class Buyer{
     private int haveMoney = 1000;
     private int havePoint = 0;
-    private Product[] pLog = new Product[10];
-    private int idx = 0;
+    private Vector<Product> item = new Vector<Product>();
     private int sum = 0;
     private StringBuilder buyList = new StringBuilder();
 
     void Buy(Product p){
         haveMoney -= p.price;
         havePoint += p.bonusPoint;
-        pLog[idx++] = p;
+        item.add(p);
     }
 
     void Summary(){
-        for (Product product : pLog) {
-            if (product != null) {
-                sum += product.price;
-                buyList.append(product);
-            }
+        if (item.isEmpty()) {
+            return;
+        }
+        for (Product product : item) {
+            Product p = (Product) product;
+            sum += p.price;
+            buyList.append(p);
         }
         System.out.println("지금까지 구매한 총 금액:"+sum);
         System.out.println("지금까지 구매한 품목:"+buyList);
