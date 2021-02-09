@@ -3,6 +3,7 @@ package JavaStandard.ch12;
 enum Direction{
     EAST(1, ">"), SOUTH(2,"V"), WEST(3,"<"), NORTH(4,"^");
 
+    //m values()는 열거형의 모든 상수를 배열에 담아 반환한다.
     private static final Direction[] DIR_ARR = Direction.values();
     private final int value;
     private final String symbol;
@@ -15,13 +16,13 @@ enum Direction{
     public int getValue() {
         return value;
     }
-
     public String getSymbol() {
         return symbol;
     }
 
+    //m 지정한 enum 단일 객체를 받기 위한 함수
     public static Direction of(int dir){
-        if(dir<1 || dir >4){
+        if(dir<1 || dir >4){ //m enum 개수 벗어날 경우
             throw new IllegalArgumentException("Invalid value :"+ dir);
         }
         return DIR_ARR[dir-1];

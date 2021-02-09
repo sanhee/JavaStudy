@@ -5,7 +5,7 @@ interface Calculation {
 }
 
 //m 전략패턴
-class Addition implements Calculation {
+class Addition implements Calculation { 
     @Override
     public int calculate(int num1, int num2) {
         return num1 + num2;
