@@ -15,7 +15,6 @@ public class APP {
         System.out.println(pawn.getRepresentation());
         System.out.println(pawn2.getRepresentation());
         System.out.println(knight.getRepresentation());
-
     }
 
 }
