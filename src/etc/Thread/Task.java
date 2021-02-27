@@ -29,8 +29,8 @@ public class Task extends Thread {
         Thread task = new Task();
         Thread normal = new Task();
         task.setDaemon(true); // 데몬 스레드, 모든 일반 스레드가 죽으면 자동으로 죽음
-        task.start();
-        normal.start();
+        task.run(); // //m 스레드가 생성되지 않고, 단순 메서드 호출이다.
+        normal.run();
         Thread.sleep(5000);  // 메인 스레드가  5초뒤 종료
 
         System.out.println("Main thread end");
