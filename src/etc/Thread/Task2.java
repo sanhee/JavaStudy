@@ -3,30 +3,24 @@ package etc.Thread;
 public class Task2 extends Thread{
 
     private int customId;
-    private int size;
-    public Task2(int customID, int size){
+    private long size;
+    public Task2(int customID, long size){
         this.customId = customID;
         this.size = size;
     }
     @Override
     public void run(){
-        // Thread 한테 매게변수를 어떻게 전달해줄까?
-        // 1. public static (위험하다 SLACK에서 확인)
-
+        long sum = 0;
         for(int i =0; i< size;i++){
-            if(customId % 2 == 0){ // 커스텀 번호 기준 출력이 다름.
-                System.out.println("*****");
-            }else{
-                System.out.println("......");
-            }
-
+            sum+=i;
         }
+        System.out.println("thread ended ("+customId+")");
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        final int n = 200000; // 불필요한 static 변수 정적변수가 제거됨.
+        final long n = 200_000_0000L; // 스레드 작업량
         final int numThread = 2;
         Thread[] threadArray = new Thread[numThread];
 
@@ -46,11 +40,7 @@ public class Task2 extends Thread{
             thread.start();
         }
         for(Thread thread : threadArray){
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            thread.join();
         }
 
         long end = System.currentTimeMillis();
