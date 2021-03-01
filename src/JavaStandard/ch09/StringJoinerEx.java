@@ -16,6 +16,11 @@ public class StringJoinerEx {
         }
         System.out.println(strJoiner);
 
+        String test = "abcdeb";
+        int index = test.indexOf("b");
+        int index2 = test.lastIndexOf("b"); // 뒤에서부터 읽네 ㅇㅋ
+        System.out.println(index);
+        System.out.println(index2);
 
     }
 }
