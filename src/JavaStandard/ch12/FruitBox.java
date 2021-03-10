@@ -2,12 +2,24 @@ package JavaStandard.ch12;
 
 import java.util.ArrayList;
 
-class Fruit {public String toString(){ return "Fruit";}}
+interface eatable{
+    abstract void eat();
+}
+
+class Fruit implements eatable{
+    public String toString(){
+        return "Fruit";
+    }
+    @Override
+    public void eat() {
+
+    }
+}
 class Apple extends Fruit {public String toString(){ return "Apple";}}
 class Grape extends Fruit{public String toString(){ return "Grape";}}
 class Toy {public String toString(){ return "Toy";}}
 
-class Box<T>{
+class Box<T extends Fruit & eatable>{ // 제한된 제네릭 클래스
     ArrayList<T> list = new ArrayList<>();
     void add(T item) {
         list.add(item);
@@ -28,7 +40,7 @@ public class FruitBox {
         Box<Fruit> fruitBox = new Box<>();
         Box<Apple> appleBox = new Box<>();
         Box<Grape> grapeBox = new Box<>();
-        Box<Toy> toyBox = new Box<>();
+        //Box<Toy> toyBox = new Box<>(); // 오류
 
         fruitBox.add(new Fruit());
         fruitBox.add(new Apple()); //m 다형성
