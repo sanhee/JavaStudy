@@ -11,8 +11,8 @@ public class CloneEx1 {
         public String toString() {
             return "Point{" + "x=" + x + ", y=" + y + '}';
         }
-        @Override
-        public Point clone(){ // 상속관계가 없는 다른 클래스에서 clone을 사용하기 위해서 modifier 를 public으로 변경해주었다.
+
+        public Point clone33332(){ // 상속관계가 없는 다른 클래스에서 clone을 사용하기 위해서 modifier 를 public으로 변경해주었다.
             Object obj = null;
             try{
                 obj = super.clone();
@@ -26,7 +26,7 @@ public class CloneEx1 {
     public static void main(String[] args) {
 
         Point original = new Point(3, 5);
-        Point copy = original.clone(); // 복제
+        Point copy = original.clone33332(); // 복제
         System.out.println(original);
         System.out.println(copy);
 
