@@ -1,7 +1,5 @@
-package Design.FactoryMethodPattern.ex3.unit;
-
-import Design.FactoryMethodPattern.ex3.UnitColor;
-import Design.FactoryMethodPattern.ex3.UnitType;
+package design.factory_method_pattern.ex3.unit;
+import design.factory_method_pattern.ex3.*;
 
 public class PieceFactory {
 

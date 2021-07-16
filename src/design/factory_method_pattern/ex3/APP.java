@@ -1,7 +1,7 @@
-package Design.FactoryMethodPattern.ex3;
+package design.factory_method_pattern.ex3;
 
-import Design.FactoryMethodPattern.ex3.unit.Piece;
-import Design.FactoryMethodPattern.ex3.unit.PieceFactory;
+import design.factory_method_pattern.ex3.unit.Piece;
+import design.factory_method_pattern.ex3.unit.PieceFactory;
 
 public class APP {
 

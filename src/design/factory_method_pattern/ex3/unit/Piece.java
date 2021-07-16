@@ -1,7 +1,8 @@
-package Design.FactoryMethodPattern.ex3.unit;
+package design.factory_method_pattern.ex3.unit;
 
-import Design.FactoryMethodPattern.ex3.UnitColor;
-import Design.FactoryMethodPattern.ex3.UnitType;
+import design.factory_method_pattern.ex3.UnitColor;
+import design.factory_method_pattern.ex3.UnitType;
+
 
 public class Piece {
     private final UnitColor color; // Piece 색상

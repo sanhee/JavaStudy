@@ -1,4 +1,4 @@
-package Design.FactoryMethodPattern.ex3;
+package design.factory_method_pattern.ex3;
 
 public enum UnitColor {
     BLACK,
