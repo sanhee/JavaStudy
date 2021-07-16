@@ -1,15 +1,16 @@
 package JavaStandard.ch07;
 
-interface Parseable{
+interface Parseable {
     // 구문 분석작업을 수행한다.
     public abstract void parse(String filename);
 }
-class ParserManager{
+
+class ParserManager {
     // 리턴타입이 Parseable 인터페이스이다.
-    public static Parseable getParser(String type){
-        if(type.equals("XML")){
+    public static Parseable getParser(String type) {
+        if (type.equals("XML")) {
             return new XMLParser_();
-        }else{
+        } else {
             Parseable p = new HTMLParser();
             return p;
         }
@@ -17,18 +18,20 @@ class ParserManager{
     }
 }
 
-class XMLParser_ implements Parseable{
+class XMLParser_ implements Parseable {
     @Override
     public void parse(String filename) {
-        System.out.println(filename+"- XML parsinng completed.");
+        System.out.println(filename + "- XML parsinng completed.");
     }
 }
-class HTMLParser implements Parseable{
+
+class HTMLParser implements Parseable {
     @Override
     public void parse(String filename) {
-        System.out.println(filename+"- HTML parsinng completed.");
+        System.out.println(filename + "- HTML parsinng completed.");
     }
 }
+
 public class ParserTest {
     public static void main(String[] args) {
 

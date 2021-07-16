@@ -19,7 +19,7 @@ public class Piece {
     }
 
     public char getRepresentation() {
-        return UnitType.getMark(this.color,this.getClass().getSimpleName());
+        return UnitType.getMark(this.color, this.getClass().getSimpleName());
     }
 
 }

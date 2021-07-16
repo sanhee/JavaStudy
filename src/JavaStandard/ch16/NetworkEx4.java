@@ -20,7 +20,7 @@ public class NetworkEx4 {
             //m openStream(): URL과 연결된 URLConnection의 InputStream을 얻는다.
             input = new BufferedReader(new InputStreamReader(url.openStream()));
 
-            while((line=input.readLine()) !=null){
+            while ((line = input.readLine()) != null) {
                 System.out.println(line);
             }
             input.close();

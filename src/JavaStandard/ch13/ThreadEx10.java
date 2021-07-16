@@ -1,6 +1,6 @@
 package JavaStandard.ch13;
 
-public class ThreadEx10 implements Runnable{
+public class ThreadEx10 implements Runnable {
     static boolean autoSave = false;
 
     public static void main(String[] args) {
@@ -8,14 +8,14 @@ public class ThreadEx10 implements Runnable{
         t.setDaemon(true); // 이 부분이 없으면 종료되지 않는다.
         t.start();
 
-        for(int i=1;i<=10;i++){
+        for (int i = 1; i <= 10; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.println(i);
-            if( i == 5 ){
+            if (i == 5) {
                 autoSave = true;
             }
         }

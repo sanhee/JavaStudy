@@ -5,23 +5,23 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 public class Abstract {
-    public Abstract(){
-        try{
+    public Abstract() {
+        try {
             // 멤버 변수를 취득
-            for(Field field : AnnotationExample.class.getDeclaredFields()){
+            for (Field field : AnnotationExample.class.getDeclaredFields()) {
                 // DependancyInjection 어노테이션을 취득
                 DependancyInjection anno = field.getDeclaredAnnotation(DependancyInjection.class);
 
-                if(anno != null){
+                if (anno != null) {
                     // 접근 제한자 무시
                     field.setAccessible(true);
                     // value 함수 값 취득
-                    Class<?> clz = anno.value();  // ??
+                    Class<?> clz = anno.value();
                     Constructor<?> constructor;
 
-                    if(clz == Object.class){
+                    if (clz == Object.class) {
                         // 멤버 변수의 타입을 취득
-                        clz = field.getType();  // ??????
+                        clz = field.getType();
                     }
 
                     constructor = clz.getConstructor();

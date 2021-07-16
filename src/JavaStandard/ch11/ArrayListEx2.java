@@ -9,17 +9,17 @@ public class ArrayListEx2 {
         String source = "0123456789abcdefghijABCDEFGHIJ!@#$%^&*()zzz";
         int length = source.length();
 
-        List list = new ArrayList<String>((length/LIMIT+10)); // 크기를 약간 여유롭게 잡는다.
+        List list = new ArrayList<String>((length / LIMIT + 10)); // 크기를 약간 여유롭게 잡는다.
 
-        for(int i=0; i< length; i+=LIMIT){
-            if(i+LIMIT<length){
-                list.add(source.substring(i,i+LIMIT));
-                
-            }else{
+        for (int i = 0; i < length; i += LIMIT) {
+            if (i + LIMIT < length) {
+                list.add(source.substring(i, i + LIMIT));
+
+            } else {
                 list.add(source.substring(i));
             }
         }
-        for(int i=0; i< list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
 

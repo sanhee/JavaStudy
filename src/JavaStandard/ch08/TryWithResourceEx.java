@@ -2,33 +2,33 @@ package JavaStandard.ch08;
 
 public class TryWithResourceEx {
     public static void main(String[] args) throws Exception {
-        try(CloseableResource cr = new CloseableResource()){
+        try (CloseableResource cr = new CloseableResource()) {
             cr.exceptionWork(false); // 예외가 발생하지 않는다.
         } catch (WorkException e) {
             e.printStackTrace();
-        } catch (CloseException e){
+        } catch (CloseException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println();
 
-        try(CloseableResource cr = new CloseableResource()){
+        try (CloseableResource cr = new CloseableResource()) {
             cr.exceptionWork(true); // 예외가 발생한다.
         } catch (WorkException e) {
             e.printStackTrace();
-        }catch (CloseException e){
+        } catch (CloseException e) {
             e.printStackTrace();
         }
     }
 }
 
 
-class CloseableResource implements AutoCloseable{
-    public void exceptionWork(boolean exception) throws WorkException{
-        System.out.println("exceptionWork("+exception+")가 호출됨");
+class CloseableResource implements AutoCloseable {
+    public void exceptionWork(boolean exception) throws WorkException {
+        System.out.println("exceptionWork(" + exception + ")가 호출됨");
 
-        if(exception)
+        if (exception)
             throw new WorkException("WorkException발생!!");
     }
 
@@ -40,13 +40,13 @@ class CloseableResource implements AutoCloseable{
 }
 
 class WorkException extends Exception {
-    WorkException(String msg){
+    WorkException(String msg) {
         super(msg);
     }
 }
 
-class CloseException extends Exception{
-    CloseException(String msg){
+class CloseException extends Exception {
+    CloseException(String msg) {
         super(msg);
     }
 }

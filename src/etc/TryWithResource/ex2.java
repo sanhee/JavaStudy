@@ -3,16 +3,16 @@ package etc.TryWithResource;
 public class ex2 {
 
     public static void main(String[] args) {
-        try(CustomResource cr = new CustomResource()){
+        try (CustomResource cr = new CustomResource()) {
             System.out.println("Do something...");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static class CustomResource implements AutoCloseable{
+    private static class CustomResource implements AutoCloseable {
 
-        public void doSomething(){
+        public void doSomething() {
             System.out.println("Do something...");
         }
 
@@ -22,4 +22,3 @@ public class ex2 {
         }
     }
 }
-

@@ -19,10 +19,10 @@ public class ExceptionEx15 {
     }// createFile 메서드 끝
 
 
-    static void createNewFile(File f){
-        try{
+    static void createNewFile(File f) {
+        try {
             f.createNewFile();   // 파일을 생성한다.
-        }catch (Exception e){
+        } catch (Exception e) {
             // createNefile 메서드의 끝
         }
     }
@@ -30,7 +30,7 @@ public class ExceptionEx15 {
     public static void main(String[] args) {
         //command line에서 입력받은 값을 이름으로 갖는 파일을 생성한다.
         File f = createFile("");
-        System.out.println(f.getName()+"파일이 성공적으로 생성되었습니다.");
+        System.out.println(f.getName() + "파일이 성공적으로 생성되었습니다.");
     }
 
 }

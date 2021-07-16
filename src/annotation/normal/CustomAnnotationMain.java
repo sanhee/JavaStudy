@@ -14,16 +14,16 @@ public class CustomAnnotationMain {
     }
 
     public static void trackUseCases(List<Integer> useCases, Class<?> cl) {
-        for(Method m : cl.getDeclaredMethods()){
+        for (Method m : cl.getDeclaredMethods()) {
             CustomAnnotation uc = m.getAnnotation(CustomAnnotation.class);
-            if(uc != null){
-                System.out.println("Found Use Case :"+ uc.id()+ " " + uc.description());
+            if (uc != null) {
+                System.out.println("Found Use Case :" + uc.id() + " " + uc.description());
                 useCases.remove(new Integer(uc.id()));
             }
         }
 
-        for (int i : useCases){
-            System.out.println("Warning : Missing use case-" +i);
+        for (int i : useCases) {
+            System.out.println("Warning : Missing use case-" + i);
         }
     }
 }

@@ -3,12 +3,13 @@ package JavaStandard.ch08;
 public class ChainedExceptionEx {
     public static void main(String[] args) {
         try {
-           install();
-        } catch (InstallException e){
+            install();
+        } catch (InstallException e) {
             e.printStackTrace();
         }
     }
-    static void install() throws InstallException{
+
+    static void install() throws InstallException {
         try {
             startInstall();
             copyFile();
@@ -49,8 +50,8 @@ public class ChainedExceptionEx {
     }
 }
 
-class InstallException extends Exception{
-    InstallException(String msg){
+class InstallException extends Exception {
+    InstallException(String msg) {
         super(msg);
     }
 }

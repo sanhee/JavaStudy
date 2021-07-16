@@ -9,5 +9,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 public @interface CustomAnnotation {
     public int id();
+
     public String description() default "no description";
 }

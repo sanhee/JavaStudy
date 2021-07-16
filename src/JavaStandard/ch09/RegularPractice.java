@@ -13,8 +13,8 @@ public class RegularPractice {
         Pattern p = Pattern.compile(changeWord);
         Matcher matcher = p.matcher(originString);
 
-        while (matcher.find()){
-            matcher.appendReplacement(sb,"***");
+        while (matcher.find()) {
+            matcher.appendReplacement(sb, "***");
         }
         matcher.appendTail(sb);
 

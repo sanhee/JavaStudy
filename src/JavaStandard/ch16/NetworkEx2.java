@@ -10,7 +10,7 @@ public class NetworkEx2 {
         try {
             //m URL(Uniform Resource Location)은 인턴세에 존재하는 여러 서버들이 제공하는 자원에 접근할 수 있는 주소를 표현하기 위한 것
             URL url = new URL("http://www.codechobo.com:80/sample/"
-                                  +"hello.html?referer=javachobo#index1"); //M 링크 작동안함.
+                    + "hello.html?referer=javachobo#index1"); //M 링크 작동안함.
 
             System.out.println("URL = 프로토콜://호스트명:포트번호/경로명/파일명?쿼리스트링#참조");
             System.out.println(url.getAuthority());

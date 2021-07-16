@@ -36,7 +36,7 @@ public class TravelCustomer {
         this.price = price;
     }
 
-    public String toString(){
-        return name +", "+ age +"," +price;
+    public String toString() {
+        return name + ", " + age + "," + price;
     }
 }

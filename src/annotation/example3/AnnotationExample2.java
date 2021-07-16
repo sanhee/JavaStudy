@@ -1,20 +1,20 @@
 package annotation.example3;
 
-public class AnnotationExample2 extends AbstractClass{
+public class AnnotationExample2 extends AbstractClass {
     // 자동 실행 어노테이션 설정
     @AutoExecute
-    public void print(){
+    public void print() {
         System.out.println("print!!!!");
     }
 
     // 자동 실행 어노테이션 설정\
     @AutoExecute
-    public void run(){
+    public void run() {
         System.out.println("run!!!!");
     }
 
     // 일반 메소드
-    public void test(){
+    public void test() {
         System.out.println("test");
 
     }

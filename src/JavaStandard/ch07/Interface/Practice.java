@@ -1,18 +1,20 @@
 package JavaStandard.ch07.Interface;
 
-class Human{
+class Human {
     int age = 15;
-    void eat(){
+
+    void eat() {
         System.out.println("Human");
     }
 }
 
 interface HumanAble {
     public static final int age = 20;
+
     public abstract void eat();
 }
 
-class sanhee extends Human implements HumanAble{
+class sanhee extends Human implements HumanAble {
     @Override
     public void eat() {
         super.eat();
@@ -30,7 +32,7 @@ public class Practice {
     public static void main(String[] args) {
         sanhee sanhee = new sanhee();
 
-        System.out.println("HumanAble.age:" +sanhee.age_0);
-        System.out.println("super.age:" +sanhee.age_1);
+        System.out.println("HumanAble.age:" + sanhee.age_0);
+        System.out.println("super.age:" + sanhee.age_1);
     }
 }

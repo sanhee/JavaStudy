@@ -10,6 +10,7 @@ public enum UnitType {
     NONE('.');
 
     private final char unitRepresentation;
+
     UnitType(char mark) {
         this.unitRepresentation = mark;
     }
@@ -17,7 +18,7 @@ public enum UnitType {
     public static char getMark(UnitColor color, String unitClassName) {
         char mark = ' ';
 
-        switch (color){
+        switch (color) {
             case BLACK:
                 mark = Character.toUpperCase(UnitType.valueOf(unitClassName.toUpperCase()).unitRepresentation);
                 break;

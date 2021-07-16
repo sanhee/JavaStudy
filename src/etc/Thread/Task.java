@@ -4,16 +4,16 @@ public class Task extends Thread {
 
     @Override
     public void run() {
-        if(isDaemon()) {
+        if (isDaemon()) {
             this.setName("Daemon");
         }
         System.out.printf("I am thread %s (%d)\n", this.getName(), this.getId());
         int count = 0;
-        while(isDaemon() || count < 10) {
+        while (isDaemon() || count < 10) {
             try {
                 count++;
                 Thread.sleep(1000);
-                System.out.println(this.getName() + ": "+count);
+                System.out.println(this.getName() + ": " + count);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

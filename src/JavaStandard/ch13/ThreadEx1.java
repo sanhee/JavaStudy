@@ -26,21 +26,21 @@ public class ThreadEx1 {
     }
 }
 
-class ThreadEx_1 extends Thread{
+class ThreadEx_1 extends Thread {
     @Override
     public void run() {
-        int[] a = {1,2,3,4,5};
-        for(int i: a){
+        int[] a = {1, 2, 3, 4, 5};
+        for (int i : a) {
             System.out.println(getName()); // 조상인 스레드의 getName()을 호출
         }
     }
 }
 
-class ThreadEx_2 implements Runnable{
+class ThreadEx_2 implements Runnable {
     @Override
     public void run() {
 
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println(Thread.currentThread().getName()); //m 현재 실행중인 Thread 를 반환한다.
         }
 

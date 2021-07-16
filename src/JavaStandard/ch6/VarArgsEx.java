@@ -1,29 +1,27 @@
 package JavaStandard.ch6;
 
 public class VarArgsEx {
+    public int test;
 
     public static void main(String[] args) {
-        String[] strArr = {"100", "200", "300"};
-
-        System.out.println(concatenate("", "100", "200", "300"));
-        System.out.println(concatenate("-", strArr));
-        System.out.println(concatenate(",", new String[]{"1", "2", "3"}));
-        System.out.println("["+concatenate(",",new String[0])+"]");
-        System.out.println("["+concatenate(",")+"]");
+        String[] cocoa = new String[]{"노을", "쿠퍼"};
+        print(cocoa);
+        print(); // 인자가 없어도 됨.
+        print("우디", "제인");
+        print("우디", "쿠퍼", "제인", "노을");
     }
 
-    static String concatenate(String delim, String... args) {
-        String result = "";
-        for(String str : args){
-            result += str + delim;
+    public static void print(String... strings) {
+        for (String str : strings) {
+            System.out.print(str + " ");
         }
-        return result;
+        System.out.println();
     }
-    /*
-    static String concatenate(String... args){
-        return concatenate("", args);
-    }
-    */
 
+    @Override
+    public String toString() {
+        return "VarArgsEx{" +
+                "test=" + test +
+                '}';
+    }
 }
-

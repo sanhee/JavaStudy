@@ -10,8 +10,8 @@ public class StringJoinerEx {
         String[] array = e.split("");
 
 
-        StringJoiner strJoiner = new StringJoiner("|","[","]");
-        for(String str : array){
+        StringJoiner strJoiner = new StringJoiner("|", "[", "]");
+        for (String str : array) {
             strJoiner.add(str);
         }
         System.out.println(strJoiner);

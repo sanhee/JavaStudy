@@ -26,7 +26,7 @@ public class SimpleHttpClient {
 
         // 응답 내용
         String line = null;
-        while((line = in.readLine()) != null) {
+        while ((line = in.readLine()) != null) {
             System.out.println(line);
             System.out.println();
         }

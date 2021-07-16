@@ -5,13 +5,13 @@ import java.lang.reflect.Method;
 
 public class AbstractClass {
 
-    public AbstractClass(){
+    public AbstractClass() {
 
-        for (Method method : AnnotationExample2.class.getDeclaredMethods()){
+        for (Method method : AnnotationExample2.class.getDeclaredMethods()) {
             // AutoExecute 어노테이션을 취득
             AutoExecute anno = method.getDeclaredAnnotation(AutoExecute.class);
 
-            if(anno != null){
+            if (anno != null) {
                 // 접근 제어자 무시
                 method.setAccessible(true);
                 // 함수 실행

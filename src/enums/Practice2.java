@@ -1,22 +1,20 @@
 package enums;
 
-import java.util.function.Function;
-
 public class Practice2 {
     enum CalculatorType{
-        CALC_A(value -> value),
-        CALC_B(value -> value*7),
-        CALC_C(value -> value*2),
-        CALC_ETC(value -> 0L);
-
-        private Function<Long, Long> expression;
-
-        CalculatorType(Function<Long, Long> expression) {
-            this.expression = expression;
-        }
-        public long calculate(long value){
-            return expression.apply(value);
-        }
+        CALC_A{
+            long calculate(long value){return value;}
+        },
+        CALC_B{
+            long calculate(long value){return value*7;}
+        },
+        CALC_C{
+            long calculate(long value){return value*2;}
+        },
+        CALC_ETC{
+            long calculate(long value){return 0L;}
+        };
+        abstract long calculate(long value);
     }
 
     public static void main(String[] args) {

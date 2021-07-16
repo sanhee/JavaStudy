@@ -1,18 +1,19 @@
 package JavaStandard.ch07;
 
-class Outer{
+class Outer {
 
-    class InnerClass{
+    class InnerClass {
         int instanceVariable = 10;
 
     }
-    static class StaticInner{
+
+    static class StaticInner {
         int instanceVariable = 20;
         static int classVariable = 30;
     }
 
-    void method(){
-        class LocalInner{
+    void method() {
+        class LocalInner {
             int instanceVariable = 40;
         }
 
@@ -36,7 +37,7 @@ public class InnerEx4 {
 
         System.out.println(Outer.StaticInner.classVariable);
 
-        Outer.StaticInner si= new Outer.StaticInner();
+        Outer.StaticInner si = new Outer.StaticInner();
         System.out.println(si.instanceVariable);
 
         o.method();

@@ -1,13 +1,15 @@
 package JavaStandard.ch6;
 
 public class BlockTest {
-    static{
+    static {
         System.out.println("static: ");
     }
+
     {
         System.out.println(" { } ");
     }
-    public  BlockTest(){
+
+    public BlockTest() {
         System.out.println("생성자");
     }
 

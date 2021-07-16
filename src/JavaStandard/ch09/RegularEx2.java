@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class RegularEx2 {
     public static void main(String[] args) {
-        String[] data = {"김과장","bat", "baby", "bonus,", "c.","cA", "ca","co","c0", "c*", "car", "combat", "count", "data", "disc"};
-
+        String[] data = {"김과장", "bat", "baby", "bonus,", "c.", "cA", "ca", "co", "c0", "c*", "car", "combat", "count", "data", "disc"};
+        StringBuilder sb = new StringBuilder();
         String[] pattern = {".*",  //m 모든 문자열
                 "^[가-힣]*$",   //m 한글 입력 허용
                 "c[a-z]*", //m c[a-z]*: c로 시작하는 모든 소문자 문자열
@@ -26,13 +26,13 @@ public class RegularEx2 {
                 "[b|c].{2}" //m [bc].{2} b또는 c로 시작하는 세 자리 문자열
         };
 
-        for(int x = 0; x< pattern.length; x++){
+        for (int x = 0; x < pattern.length; x++) {
             Pattern p = Pattern.compile(pattern[x]);
-            System.out.print("Pattern: "+pattern[x] +" 결과: ");
-            for(int i=0; i<data.length;i++){
+            System.out.print("Pattern: " + pattern[x] + " 결과: ");
+            for (int i = 0; i < data.length; i++) {
                 Matcher matcher = p.matcher(data[i]);
-                if(matcher.matches()){
-                    System.out.print(data[i]+", ");
+                if (matcher.matches()) {
+                    System.out.print(data[i] + ", ");
                 }
             }
             System.out.println();

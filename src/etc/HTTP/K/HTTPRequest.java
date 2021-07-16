@@ -15,7 +15,7 @@ public class HTTPRequest {
 
         requestLine = "GET " + url.getFile() + " " + url.getProtocol().toUpperCase() + "/1.1\r\n";
 
-        String host = url.getHost() + ((url.getPort() == -1) ? "" : ":"+url.getPort());
+        String host = url.getHost() + ((url.getPort() == -1) ? "" : ":" + url.getPort());
         headers.put("Host", host);
     }
 

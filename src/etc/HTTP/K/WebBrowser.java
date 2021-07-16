@@ -77,7 +77,7 @@ public class WebBrowser {
                     if (prev == '\r') {
                         if ("".equals(sb.toString())) {
                             break;
-                        } else if (statusLine){
+                        } else if (statusLine) {
                             response.setStatus(sb.toString());
                             statusLine = false;
                         } else {
@@ -87,7 +87,7 @@ public class WebBrowser {
                         prev = 0;
                     }
                 } else {
-                    sb.append((char)data);
+                    sb.append((char) data);
                 }
 
             }

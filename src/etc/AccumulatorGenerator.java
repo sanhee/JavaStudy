@@ -17,7 +17,10 @@ public class AccumulatorGenerator {
     private int value = 0;
 
     public IntUnaryOperator createAccumulator() {
-        IntUnaryOperator accumulate = (x) -> { value += x; return value; };
+        IntUnaryOperator accumulate = (x) -> {
+            value += x;
+            return value;
+        };
         return accumulate;
     }
 
